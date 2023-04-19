@@ -10,17 +10,15 @@ def duration(filename: str) -> str:
     return str(output.stdout, 'UTF-8').rstrip('\n')
 
 def parse_delta(entry):
-    import datetime
     h, m, s = entry.split(':')
-    return datetime.timedelta(hours=int(h), minutes=int(m), seconds=int(float(s)))
+    return dt.timedelta(hours=int(h), minutes=int(m), seconds=int(float(s)))
 
 def duration_sum(timetable: list) -> str:
-    import datetime
-    time_sum = datetime.timedelta()
+    time_sum = dt.timedelta()
     delta_times = list(map(parse_delta, timetable))
     for time in delta_times:
         time_sum += time
-    return time_sum
+    return str(time_sum)
 
 class vuration(Command):
     def execute(self):
