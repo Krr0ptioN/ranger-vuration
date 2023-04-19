@@ -5,8 +5,8 @@ from ranger.api.commands import Command
 
 def duration(filename: str) -> str:
     video = '"' + filename + '"'
-    ffmpeg = ["ffmpeg", "-i", video, "2>&1", "|", "grep", "Duration", "|", "cut", "-d", "' '", "-f", "4", "|", "sed", "s/,//"]
-    output = run(" ".join(ffmpeg), stdin=PIPE, stdout=PIPE, stderr=PIPE, shell=True)
+    cmd = "ffmpeg -i " + video + " 2>&1 | grep Duration | cut -d ' ' -f 4 | sed s/,//"
+    output = run(cmd, stdin=PIPE, stdout=PIPE, stderr=PIPE, shell=True)
     return str(output.stdout, 'UTF-8').rstrip('\n')
 
 def parse_delta(entry):
