@@ -14,6 +14,11 @@ Git to clone this repository into your
 git clone git@github.com/username/ranger-vuration.git ~/.config/ranger/plugins/vuration
 ```
 
+Or you can install it just by directly positioning the init file inside the plugins.
+```sh
+wget -O ~/.config/ranger/plugins/vuration.py https://raw.githubusercontent.com/krr0ption/ranger-vuration/master/__init__.py
+```
+
 ### Usage
 Moving your cursor over the target file and use the below command.
 ```
