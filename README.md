@@ -24,4 +24,9 @@ Moving your cursor over the target file and use the below command.
 ```
 :vuration
 ```
+You can add add keybinding for this command in your `rc.conf`.
+```
+map <C-v> vuration
+```
+
 The same command can be used for getting the total duration of files that are marked with `<space>`.
