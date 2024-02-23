@@ -3,7 +3,9 @@ A plugin for calculating video duration in ranger file manager.
 
 ### Features
 
-- Get the duration of single and multiple video files using selection mark  feature of ranger.
+- Get the duration of single and multiple video files using selection feature of ranger.
+- [ ] Results are printed in a TUI and accessable dialog
+- [ ] The history of the files analyzed files can be tracked and reviewed
 
 ### Install
 
